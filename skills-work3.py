@@ -9,19 +9,10 @@ import xml.etree.ElementTree as ET
 import requests
 from getpass import getpass
 from requests.auth import HTTPBasicAuth
+import traceback as tb
 
-def checkURL():
-    url = input('enter url to test')
-    response = requests.get(url)
-    try:
-        response.raise_for_status()
-    except requests.exceptions.HTTPError as e:
-        # Whoops it wasn't a 200
-        return "Error: " + str(e)
 
-    # Must have been a 200 status code
-    xml_obj = response.xml()
-    return xml_obj
+
 
 # Open the file containing the records.
 def get_res_data(csvFile = 'resources.csv'):
@@ -64,7 +55,13 @@ def get_data():
     # open the aforementioned file for writing.
     xmlData = open(xmlFile, 'w')
     # so many questions so little time! URL please?
-    url = str(input("Please enter the URL: "))
+    url = input("Please enter the URL: ")
+    print("Testing URL '{}'".format(url))
+    try:
+         r = requests.get(url)
+    except requests.exceptions.ConnectionError as e:
+         url = input("Connection error Enter new URL: \n")
+         tb.print_tb(tb,limit=0,file=None)
     # more questions!
     username = str(input("Please enter the username: "))
     # secure way to get the password.
@@ -74,9 +71,10 @@ def get_data():
     with requests.Session() as session:
         session.auth = (username, passwd)
         auth_header = session.get(url)
-        
+           
     payload = ""
     headers = {
+        'user-agent':"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36",
         'Content-Type': "application/xml",
         'Accept': "application/xml",
         'Cache-Control': "no-cache",
@@ -84,9 +82,19 @@ def get_data():
         'Connection': "keep-alive",
         'cache-control': "no-cache"
         }
-#send the request for data to the server.
-    response = requests.request("GET", url=url, verify=False, data=payload, headers=headers, auth=HTTPBasicAuth(username, passwd))
-
+    #send the request for data to the server.
+    try:
+        response = requests.request("GET", url=url, verify=False, data=payload, headers=headers, auth=HTTPBasicAuth(username, passwd))
+    except requests.exceptions.HTTPError as errh:
+        print ("Http Error:",errh)
+    except requests.exceptions.ConnectionError as errc:
+        print ("Error Connecting:",errc)
+    except requests.exceptions.Timeout as errt:
+        print ("Timeout Error:",errt)
+    except requests.exceptions.RequestException as err:
+        tb.print_tb(tb,limit=0,file=None)
+        print ("OOps: Something Else",err)
+        
 # write the response from the server to the file we learned about at the begining of this mess. this is a string.
     xmlData.write(response.text)
     xmlData.close() # Close the file
@@ -181,7 +189,7 @@ def main():
     choice = menu()
     while True:
         if (choice == 4):
-            x = checkURL()
+            x = xml2csv()
  #           print("Choice is invalid")
             break
         if (choice == 0):
@@ -199,7 +207,7 @@ def main():
         if (choice == 3):
             #print("Sorry not implemented yet")
             #break
-            x = create_dest_pattern()
+            x = get_res_data()
             # print(x)
 if __name__ == "__main__":
     main()

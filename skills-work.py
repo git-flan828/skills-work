@@ -12,7 +12,7 @@ from getpass import getpass
 from requests.auth import HTTPBasicAuth
 from requests.exceptions import HTTPError
     
-# Open the file containing the records.
+# Open the file containing the records. making a change to the comments here. make more changes. I made more changes
 def get_res_data(csvFile = 'resources.csv'):
     xmlFile = 'myData.xml'
     xmlData = open(xmlFile, 'w')

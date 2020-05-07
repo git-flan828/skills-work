@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BMMP Widget for Upgrade Message in PMR - More Ways to Join - Start -->
+
+<!-- BMMP Widget for Upgrade Message in PMR - More Ways to Join - End -->
+
+
+
+
+
+
+<html lang="en-US">
+
+<head>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=10, requiresActiveX=true" />
+
+	<meta name='robots' content='noindex,nofollow'>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name='format-detection' content='telephone=no'>
+	<meta name='slack-app-id' content='A5P5FDK33'>
+	<meta name="description" content="113">
+	<link rel="shortcut icon" href="/favicont29.ico" type="image/x-icon">
+
+	<title>Webex Meetings</title>
+	<base href="https://meetingsamer10.webex.com/mw3300/mywebex/jsp/pmr/pmrlobby.jsp">
+	<script type="text/javascript" src="/WBXmjsasset/js/jquery_1_3_0v.js"></script>
+	<script language=javascript
+		src="https://meetingsamer10.webex.com/svc3300/svccomponents/html/js/futurama_en_US.js?ver=289015379"></script>
+	<script language=javascript
+		src="https://meetingsamer10.webex.com/svc3300/svccomponents/html/js/telemetry/doi.1.1709.min.js?ver=2271269400">
+	</script>
+	<script language=javascript
+		src="https://meetingsamer10.webex.com/svc3300/svccomponents/html/js/telemetry/telemetry.web.js?ver=1361562419">
+	</script>
+	<script type="text/javascript">
+		telemetryInit('https://tsa.webex.com/metric/v1','A6A47C46-8B28-4706-AAB4-CBEE9A75602A','SessionKey','12727967','983209937296886461',300,'1586295238824','E37B9F7CE67544888487CD3820C2BBBC','RzH//wAAAARziaBHneX/ogvXdwudB2v4KNlQAOZ3Wp67kccBgJN4JQ==');
+	</script>
+
+
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Cisco Webex Meetings" />
+	<meta property="og:description"
+		content="Simple, modern video meetings for the global workforce. Join from anywhere, including your desktop, browser, mobile device, or video room device." />
+	<meta property="og:image"
+		content="https://meetingsamer10.webex.com/mw3300/mywebex/html/img/webexball_opengraph.png" />
+	<meta property="og:site_name" content="Cisco Webex Site" />
+	<meta property="og:url" content="https://meetingsamer10.webex.com/" />
+	<link rel="stylesheet"
+		href="https&#58;&#47;&#47;meetingsamer10.webex.com&#47;svc3300&#47;svccomponents&#47;html&#47;css&#47;futurama.css&#63;ver&#61;342082271"
+		type="text/css">
+	<link rel="stylesheet"
+		href="https&#58;&#47;&#47;meetingsamer10.webex.com&#47;brand_dbwd&#47;12727967&#47;site_meetingsamer10&#47;brand&#47;link.css&#63;rnd&#61;0.8038779760057587"
+		type="text/css">
+
+
+
+
+	<script language="javascript">
+		function AtTrim(s)
+{
+    var r1, r2, s1, s2, s3;
+
+    r1 = new RegExp("^ *");
+    r2 = new RegExp(" *$");
+
+    s1 = ""+s+"";
+    s2 = s1.replace(r1, "");
+    s3 = s2.replace(r2, "");
+
+    r1 = null;
+    r2 = null;
+
+    return(s3);
+}   
+function checkSecurityPassword(form,password,checkFlag,userName,firstName,lastName) {
+    var errorMessage="Password not allowed.";
+    var error="";
+    if(checkFlag==0){
+        error=CheckPassword(password,form);
+        if(error!=""){
+        errorMessage=errorMessage+"\n"+"A password must contain the following:"+"\n\n";
+        }
+        if (typeof(form.enDynamicPassword)=="object" && (form.enDynamicPassword.value=="true")){
+            if(PasswordFilterForSiteUrl(userName,password)){
+                error=error+"\n"+"The host name, username and the site name are not permitted."+"\n";
+            }else if(PasswordFilterForSiteUrl(form.siteurl,password)){
+                error=error+"\n"+"The host name, username and the site name are not permitted."+"\n";
+            }else if(PasswordFilterHostName(password,firstName,lastName)){
+                error=error+"\n"+"The host name, username and the site name are not permitted."+"\n";
+            }
+        }
+    }else if(checkFlag==1){
+        error=CheckPassword(password,form);
+        if(error!=""){
+        errorMessage=errorMessage+"\n"+"A password must contain the following:"+"\n\n";
+        }
+    }else if(checkFlag==2){
+        error=CheckPassword(password,form);
+        if(error!=""){
+        errorMessage=errorMessage+"\n"+"A password must contain the following:"+"\n\n";
+        }
+    }
+    if(error!=""){
+       error=errorMessage+error;
+    }
+    return error;
+}
+
+
+
+
+
+
+function CheckPassword(o,form)
+{
+var checkErrorMessage="";
+var MinLength=form.passwordMinimumLength.value;
+var nAlpha=form.passwordMinimumAlpha.value;
+var nNumberic=form.passwordMinimumNumeric.value;
+var nSpec=form.passwordMinimumSpecial.value;
+var bMix=0;
+if(form.passwordRequireMixedCase.value=="true"){
+var bMix=1;
+}
+var nSpecCount=nSpec;
+var nAlphaCount=nAlpha;
+var nNumbericCount=nNumberic;
+var p = AtTrim(o.value);
+if(p.length< MinLength)
+{
+checkErrorMessage="-"+"At least \"+MinLength+\" characters"+"\n";
+}
+for(var i=0;i<p.length;i++)
+{
+c=p.charAt(i);
+if(c<='9'&&c>='0') nNumberic--;
+else if(c<='Z'&&c>='A') {nAlpha--; bMix*=2;}
+else if(c<='z'&&c>='a') {nAlpha--;bMix*=3;}
+else nSpec--;
+}
+var err="";
+if(nAlpha>0){
+    if(nAlphaCount==1){
+        checkErrorMessage=checkErrorMessage+"-"+"At least \"+nAlphaCount+\" letter \(a, b, c...\)"+"\n";
+    }else{
+        checkErrorMessage=checkErrorMessage+"-"+"At least \"+nAlphaCount+\" letters \(a, b, c...\)"+"\n";
+    }
+}
+if(nNumberic>0){
+  if(nNumbericCount==1){
+        checkErrorMessage=checkErrorMessage+"-"+"At least \"+nNumbericCount+\" number \(1, 2, 3...\)"+"\n";
+    }else{
+        checkErrorMessage=checkErrorMessage+"-"+"At least \"+nNumbericCount+\" numbers \(1, 2, 3...\)"+"\n";
+    }
+}
+if(nSpec>0){
+  if(nSpecCount==1){
+    checkErrorMessage=checkErrorMessage+"-"+"At least \"+nSpecCount+\" special character \($, @, %...\)"+"\n";
+  }else{
+    checkErrorMessage=checkErrorMessage+"-"+"At least \"+nSpecCount+\" special characters \($, @, %...\)"+"\n";
+  }
+}
+if(bMix%2>0||bMix%3>0){
+checkErrorMessage=checkErrorMessage+"-"+"At least 1 mixed case \(A, a, B, b...\)"+"\n";
+}
+checkErrorMessage = checkErrorMessage.replace('"+MinLength+"', MinLength);
+checkErrorMessage = checkErrorMessage.replace('"+nAlphaCount+"', nAlphaCount);
+checkErrorMessage = checkErrorMessage.replace('"+nNumbericCount+"', nNumbericCount);
+checkErrorMessage = checkErrorMessage.replace('"+nSpecCount+"', nSpecCount);
+return checkErrorMessage;
+}
+
+
+function PasswordFilterHostName(o,f,l)
+{
+if((f.value.toLowerCase()!=""&& ((AtTrim(o.value)).toLowerCase()).indexOf(f.value.toLowerCase())!=-1)||(l.value.toLowerCase()!=""&&((AtTrim(o.value)).toLowerCase()).indexOf(l.value.toLowerCase())!=-1))
+{
+return true;
+}
+else
+return false;
+}
+function PasswordFilterForSiteUrl(o,c)
+{
+if((c.value.toLowerCase()).indexOf((AtTrim(o.value)).toLowerCase())!=-1)
+{
+
+return true;
+}
+else
+return false;
+}
+	</script>
+
+	<link rel="stylesheet"
+		href="https://meetingsamer10.webex.com/mw3300/mywebex/html/css/pmr_public.min.css?ver=2468577222">
+	<link rel="stylesheet"
+		href="https://meetingsamer10.webex.com/mw3300/mywebex/html/css/mypmr_attendee.min.css?ver=2841353720">
+
+	<!-- combine js into one ["jquery.ui.widget.js","jquery.iframe-transport.js","mypmr_attendee.js","javascript.js,"string.js","jquery.ellipsis.js"] by jscompiler local -DD  -->
+	<script src="https://meetingsamer10.webex.com/mw3300/mywebex/html/js/mypmr_attendee_all.min.js?ver=533654841">
+	</script>
+
+	<script type="text/javascript"
+		src="https://meetingsamer10.webex.com/mw3300/mywebex/html/js/protocolcheck.js?ver=1245354424"></script>
+
+
+
+	<!-- BMMP Widget for Upgrade Message in PMR - More Ways to Join - Start -->
+
+	<!-- BMMP Widget for Upgrade Message in PMR - More Ways to Join - End -->
+
+	<style type="text/css">
+		.hostAvatar {
+			display: block;
+			width: 11vw;
+			height: 11vw;
+			border-radius: 6vw;
+			margin-left: 7vw;
+			border: 1px solid #ccc;
+			box-shadow: 0 0 0px 2px #fff inset;
+			background: url('https://meetingsamer10.webex.com/mw3300/downloadFileServlet?siteurl=meetingsamer10&fileURI=QUhTSwAAAAR0hi-neuHweXuyyw57IXKnM6oh3SlraMgRkQKeD_MmkJsFDwGu4bTxiRIgM346QH71GBEkToIUkrxhmXPagc9ImqriRrPW0L6KbWPr8_Vj42UYjEgvbqtJ0UZiIpEkcflT7xlFZ8MEwhEpd9_DSD3x0&isAbsolute=true&a_size=640') no-repeat;
+			background-size: cover;
+			background-position: center;
+		}
+
+
+
+
+		.hostAvatar img.hostAvatar_img {
+			display: none
+		}
+
+		.highContrast .hostAvatar img.hostAvatar_img {
+			width: 100%;
+			height: 100%;
+			display: block
+		}
+
+		.btn.big {
+			height: 53px;
+		}
+
+		#mwx-lnk-logoutLink:hover {
+			color: #049FD9;
+			text-decoration: none;
+		}
+
+		.chair {
+			z-index: -3;
+		}
+
+		.con_bottom {
+			z-index: -2;
+		}
+
+		.cup {
+			z-index: -1;
+		}
+	</style>
+	<script language="javascript">
+		$(function() {	
+			
+		      	if(self!= top){
+		      		top.location = self.location.href;
+		      	} 
+		      	
+		});
+	
+		function closeTips() {
+	        $("#btn_more_info+div.popover").find("a.close").trigger("click");
+	    }
+	    function refreshPage() {
+	        location.href = location.href;
+	    }
+	    function KeyDown(event) {
+	        if(event.keyCode==27 || event.keyCode==13){
+	        	
+	        	if(window.thinClientConfig.isDefaultClient){
+	        		$("#mwx-btn-join-thin-client").click();
+	        	}else{
+	            JoinNow();
+	            }
+	            
+	        }
+	    }
+	    
+	    function AttNameClick() {
+	        var txtUserName = $("#attendeeName");
+	        var attendeeName = txtUserName.val();
+	        var markedAttName = "Your name";
+	        if (attendeeName == markedAttName) {
+	            txtUserName.val("");
+	            txtUserName.removeClass("markAttInputColor").addClass("attInputColor");
+	        }
+	    }
+	    
+	    function AttEmailClick() {
+	        var txtEmail = $("#attendeeEmail");
+	        var attendeeEmail = txtEmail.val();
+	        var markedEmail = "Your email address";
+	        if (attendeeEmail == markedEmail) {
+	            txtEmail.val("");
+	            txtEmail.removeClass("markAttInputColor").addClass("attInputColor");
+	        }
+	    }
+	    
+	    function AttNameOnblur() {
+	        var txtUserName = $("#attendeeName");
+	        var attendeeName = txtUserName.val();
+	        var markedAttName = "Your name";
+	        if (AtTrim(attendeeName) == "") {
+	            txtUserName.removeClass("attInputColor").addClass("markAttInputColor");
+	            txtUserName.val(markedAttName);
+	        }
+	    }
+	    
+	    function AttEmailOnblur() {
+	        var txtEmail = $("#attendeeEmail");
+	        var attendeeEmail = txtEmail.val();
+	        var markedEmail = "Your email address";
+	        if (AtTrim(attendeeEmail) == "") {
+	            txtEmail.removeClass("attInputColor").addClass("markAttInputColor");
+	            txtEmail.val(markedEmail);
+	        }
+	    }
+	    
+	    function checkAttendeeName(attendeeName) {
+	    	var tempName = AtTrim(attendeeName);
+	    	return tempName != "" && tempName != "Your name";
+	    }
+	    function checkGuestInput() {
+	        var attendeeName = document.getElementById("attendeeName").value || "", 
+	        attendeeEmail = document.getElementById("attendeeEmail").value || "";
+	        
+	        var markedAttName = "Your name";
+	        var markedEmail = "Your email address";
+	        
+	        if (!checkAttendeeName(attendeeName)) {
+	            alert("The name is blank. Please type the name.");
+	            document.getElementById("attendeeName").focus();
+	            return false;
+	        }
+	        if (attendeeName.length > 64) {
+	            alert("The name contains too many characters.");
+	            document.getElementById("attendeeName").focus();
+	            return false;
+	        }
+	        if (!AtTrim(attendeeEmail) && 1) {
+	            alert("Please provide your email address.");
+	            document.getElementById("attendeeEmail").focus();
+	            return false;
+	        }
+	        
+	        if (!isValidEmail(attendeeEmail) && $("#attendeeEmail").attr("class").indexOf("markAttInputColor")==-1 && 1) {
+	            alert("Your email address is invalid. Please retype it.");
+	            document.getElementById("attendeeEmail").focus();
+	            return false;
+	        }
+	 
+	        if (!isValidEmail(attendeeEmail) && $("#attendeeEmail").attr("class").indexOf("markAttInputColor")>=0) {
+	      	  $("#attendeeEmail").val("");
+	      	}
+	
+	        return true;
+	    }
+
+	    function getJoinURL (isLauchThin) {
+	        var saveJoinInfo ="";
+	        var attendeeName ="";
+	        var attendeeEmail ="";
+	   	 	
+	        attendeeName = "";
+	        attendeeEmail = "";
+	        if ($("#cookieInfo").is(":hidden"))
+	        {
+	            attendeeName = document.getElementById("attendeeName").value+"";
+	            attendeeEmail = document.getElementById("attendeeEmail").value+"";
+	        }
+	        var rememberElement = $('#mwx-chk-rememberme');
+	        if (rememberElement.length > 0) {
+	            var checkFlag = rememberElement.data('checkbox').getValue();
+	            if (checkFlag) {
+	                saveJoinInfo = "&SaveJoinInfo=on";
+	            } else {
+	                saveJoinInfo = "&SaveJoinInfo=off";
+	            }
+	            
+	        }
+	        
+    
+	      if (!checkAttendeeName(attendeeName))
+	      {
+	        alert("The name is blank. Please type the name.");
+	        document.getElementById("attendeeName").focus();
+	        return false;
+	      }
+	        
+	      if(attendeeName.length>64)
+	      {
+	        alert("The name contains too many characters.");
+	        document.getElementById("attendeeName").focus();
+	        return false;
+	      }
+	    var emailHint = 'Your email address';
+	    if ((AtTrim(attendeeEmail)=="" || AtTrim(attendeeEmail)==emailHint ) && 1)
+	    {
+	     // showInputArea();
+	       alert("Please provide your email address.");
+	      document.getElementById("attendeeEmail").focus();
+	      return false;
+	    }
+	    
+	      if (AtTrim(attendeeEmail)!="")
+	      {
+	    	  if (!isValidEmail(attendeeEmail) && $("#attendeeEmail").attr("class").indexOf("markAttInputColor")>=0)
+	          {
+	      	 	 attendeeEmail = "";
+	      	  }
+	
+	          if (!isValidEmail(attendeeEmail) && $("#attendeeEmail").attr("class").indexOf("markAttInputColor")==-1){
+		          alert("Your email address is invalid. Please retype it.");
+		          document.getElementById("attendeeEmail").focus();
+		          return false;
+	         }
+	      }
+	    
+	     
+	     
+	     
+	    var joinURL;
+	     if (attendeeName != "" && attendeeName != null) {
+	         joinURL='/mw3300/mywebex/cmr/cmr.do?from=cmr&siteurl=meetingsamer10&AT=join&attendeeName='+encodeURIComponent(attendeeName) +'&attendeeEmail='+encodeURIComponent(attendeeEmail)+saveJoinInfo+'&username=flan828';
+	     } else {
+	         joinURL='/mw3300/mywebex/cmr/cmr.do?from=cmr&siteurl=meetingsamer10&AT=join&username=flan828';
+	     }
+	     
+	     
+	     if(isLauchThin){
+	    	 joinURL+='&logfrom=11';
+	     }else {
+	    	 joinURL+= "&logfrom=6";
+	     }
+	     
+	     return joinURL;
+	    }
+	    //psobegin fix disclaimer page refresh in frameset add by dirk
+	    function JoinNow() {
+	          
+	        var ret = getJoinURL(false);
+	        if (ret != false) {
+	            //top.location.href = ret;
+	            var stepUrl =ret;
+	            var x = document.getElementById("myPersonalMeetingForm");
+	            x.action = stepUrl;
+	            var today=new Date();
+	            document.getElementById("clicktime").value=today.getTime();
+	           
+	            $("#mwx-btn-pmr-enter-room").prop('onclick',null).off('click');
+	            $("#mwx-btn-pmr-enter-room").css({"opacity":"0.65","cursor":"wait"});
+	            
+	            $("#mwx-btn-pmr-enter-lobby").prop('onclick',null).off('click');
+	            $("#mwx-btn-pmr-enter-lobby").css({"opacity":"0.65","cursor":"wait"});
+	            
+	            $("#btn_join").prop('onclick',null).off('click');
+	            $("#btn_join").css({"opacity":"0.65","cursor":"wait"});
+	            
+	            x.submit();
+	        }
+	    }
+	    //psoend add by dirk
+	
+	    function ThinClientJoinNow(type){
+	        var joinURL='/mw3300/mywebex/cmr/cmr.do?from=cmr&signBeforeJoin=1&fromThinClient=' + (type? type : 1) + '&siteurl=meetingsamer10&AT=join&username=flan828';
+	        var x = document.getElementById("myPersonalMeetingForm");
+	        x.action = joinURL;
+	        x.submit();
+	    }
+
+	    function FacebookJoinNow() {
+	    	
+	    	top.location.href='https://idbroker.webex.com/idb/IdBMeetingsLogin?client_id=Cea3f76aceb1bfd9d4c25093605b51916e23d5ff9ae7144a6b9f643730675ac8f&returnURL=https%3A%2F%2Fmeetingsamer10.webex.com%2Fmw3300%2Fmywebex%2Fcmr%2Fcmr.do%3Ffrom%3Dcmr%26siteurl%3Dmeetingsamer10%26AT%3Djoin%26username%3Dflan828&webexSiteName=meetingsamer10.webex.com&loginType=FB';
+	    }
+
+	    function SparkJoinNow() {
+
+             
+              writeSparkJoinTelemetry();
+             top.location.href='https://meetingsamer10.webex.com/wbxmjs/sparkjoin/sparkjoin?siteurl=meetingsamer10&pmrurl=https%3A%2F%2Fmeetingsamer10.webex.com%2Fmeet%2Fflan828&pmrsip=flan828%40meetingsamer10.webex.com&language=en_US';
+         }
+
+
+
+       function writeSparkJoinTelemetry(){
+          var meetingKey ='620006797'
+          var urlParams ='pmrID=flan828'+'&meetingKey='+meetingKey+'&pmrsip=flan828%40meetingsamer10.webex.com&siteurl=meetingsamer10'
+          $.ajax({
+                       url: '/mw3300/mywebex/sparkJoinTelemetry.do?'+urlParams,
+                       type: 'POST',
+                       async: true,
+                       data: {},
+                       success:function(data){
+                        //nothing to do.
+                       }
+                     });
+         }
+
+
+
+	    function ClearJoinInfo()
+	    {
+	        ret=confirm("Remove all your personal information, including registration, stored on this computer? The information will be lost permanently.");
+	       if (ret == true)
+	        {
+	          var clearJoinInfoParm = "&clearJoinInfo=1";
+	          top.location.href='/mw3300/mywebex/cmr/cmr.do?siteurl=meetingsamer10&AT=meet&username=flan828'+clearJoinInfoParm;
+	        }  else  {
+	          return;
+	        }
+	    }
+	    
+	    function PopupSendInvite()
+	    {
+	        WinOpt = "toolbar=no,status=no,meunu=no,scrollbars=yes,resizable=1,width=510,height=450,top=200,left=200";
+	        var link = "https://meetingsamer10.webex.com/mc3300/meetingcenter/cmr/invite.do?AT=init&siteurl=meetingsamer10";
+	        window.open(link,"",WinOpt);
+	        return;
+	    }
+	    
+	
+	    function showInputAreaDefault() 
+	    {
+            $('.s2_r>h1').css('max-height','110px');
+            $('.s2_r>h1').dotdotdot();
+	    	hideShowInput(false);
+	        $("#attendeeName").focus();
+	        $("#attendeeName").click();
+	        $("#cookieInfo").hide();
+		
+			$('#beta-label-thin-client').popover('hide');
+	
+	        if(window.initThinClientUI){
+	            window.initThinClientUI();
+	        }
+	        cleanCookieAndShowCaptchaForNotMe();
+	    }
+	    
+	    function cleanCookieAndShowCaptchaForNotMe() {
+	    	var joinURL='/mw3300/mywebex/cmr/cmr.do?from=cmr&siteurl=meetingsamer10&AT=join';
+	        $.ajax({
+                url: joinURL + '&clickNotMe=1',                 
+                type: 'post',
+                success: function(data){
+                	
+                	return;
+               }
+            });
+	    }
+	
+	    function showFilledInputArea() 
+	    {
+	        attendeeName = "";
+	        attendeeEmail = "";
+            $('.s2_r>h1').css('max-height','110px');
+            $('.s2_r>h1').dotdotdot();
+	    	hideShowInput(false);
+	    	if(attendeeName!=null&&attendeeName!='') {
+	    		$("#attendeeName").val(attendeeName);
+	    	}
+            if(attendeeEmail!=null&&attendeeEmail!='') {
+            	$("#attendeeEmail").val(attendeeEmail);
+            }         
+	        $("#cookieInfo").hide();
+		
+		$('#beta-label-thin-client').popover('hide');
+
+	        if(window.initThinClientUI){
+	            window.initThinClientUI();
+	        }
+	    }
+	    
+	    function showFilledInputAreaFromURLAPI() 
+	    {
+	        attendeeName = "null";
+	        attendeeEmail = "null";
+            $('.s2_r>h1').css('max-height','110px');
+            $('.s2_r>h1').dotdotdot();
+	    	hideShowInput(false);
+	    	if(attendeeName!=null&&attendeeName!='') {
+	    		$("#attendeeName").val(attendeeName);
+	    	}
+            if(attendeeEmail!=null&&attendeeEmail!='') {
+            	$("#attendeeEmail").val(attendeeEmail);
+            } 
+	        $("#cookieInfo").hide();
+		
+		$('#beta-label-thin-client').popover('hide');
+
+	        if(window.initThinClientUI){
+	            window.initThinClientUI();
+	        }
+	    }
+	
+	    function showInputArea() 
+	    {
+	    	hideShowInput(false);
+	
+	        
+	        attendeeName = "";
+	        attendeeEmail = "";
+	         if (attendeeName !="" && attendeeEmail=="") {
+	            $("#attendeeName").removeClass("markAttInputColor").addClass("attInputColor");
+	            $("#attendeeName").val(attendeeName);
+	            $("#attendeeEmail").val("");
+	            $("#attendeeEmail").focus();
+	         }
+	         
+	        
+	        $("#cookieInfo").hide();
+	        if(window.initThinClientUI){
+	            window.initThinClientUI();
+	        }
+	    }
+	    
+	    function hideShowInput(hideFlag) {	    	
+	    	if (hideFlag) {
+	    		$("#attendeeName").hide();
+	        	$("#attendeeEmail").hide();
+	        	$("#mwx-input-optional").hide();
+	        	$("#mwx-div-nocookie_btn_line").hide();  
+	        	$("#mwx-div-cookie_btn_line").show();    
+	        	$("#cookieInfo").show();
+	        	$("#mwx-div-remember-me").hide();
+	        	$("#btn_more_info").css('margin-top', '0px');
+	    	} else {
+	    		$("#attendeeName").show();
+	        	$("#attendeeEmail").css('display', 'inline');
+	        	$("#mwx-input-optional").show();
+	        	$("#mwx-div-remember-me").show();
+	        	$("#btn_more_info").css('margin-top', '15px');
+	        	$("#cookieInfo").hide();
+	        	$("#mwx-div-nocookie_btn_line").show(); 
+	        	$("#mwx-div-cookie_btn_line").hide();    
+	    	}	    	
+	    }
+	
+	</script>
+
+
+</head>
+
+<body class="t_pmrs t_pmrs_attendee">
+	<form action="" method="post" id="myPersonalMeetingForm" onsumbit="return false;">
+		<input type="hidden"  id="clicktime" name="clicktime"/>
+
+		<div class='world_3d' id='world_3d'>
+			<div class='con_top'></div>
+			<div class='con_mid'>
+				<div class='con_mid_l1'></div>
+				<div class='con_mid_l2 pmr_middle_body' id='con_mid_l2'>
+					<div class='screen_i2'>
+						<div class='htop'></div>
+						<div class='s2_main'>
+							<div class='l s2_l'>
+								<div class='hostAvatar'>
+									<img  alt='avatar' src="
+                            
+	                    https://meetingsamer10.webex.com/mw3300/downloadFileServlet?siteurl=meetingsamer10&fileURI=QUhTSwAAAAR0hi-neuHweXuyyw57IXKnM6oh3SlraMgRkQKeD_MmkJsFDwGu4bTxiRIgM346QH71GBEkToIUkrxhmXPagc9ImqriRrPW0L6KbWPr8_Vj42UYjEgvbqtJ0UZiIpEkcflT7xlFZ8MEwhEpd9_DSD3x0&isAbsolute=true&a_size=640 
+                             " class="hostAvatar_img" alt="">
+
+                          </div>
+								</div>
+								<div class='l s2_r'>
+									<h1 title="Stephen Flanagan&#39;s Personal Room">Stephen Flanagan&#39;s Personal
+										Room</h1>
+									<h2 style="display:none;">It&#39;s a great day to make magic!</h2>
+
+
+
+
+
+
+
+
+
+									<p data-modeA class='mt50' id="cookieInfo" style="display:none">
+										<label id="mw_lab_join_as">Joining as </label>
+										<span><a id="mw_lnk_notas" href="javascript:showInputAreaDefault();">Not ?</a></span>
+									</p>
+									<div class='' style="margin-top: 13px;display:none" id="mwx-div-cookie_btn_line">
+										<a href="javascript:void(0)" rel="Join using desktop app" role="button"
+											id='btn_join' OnClick="Javascript:JoinNow()"
+											class='btn_join btn_pmr_train_join'>Join Meeting</a>
+
+
+
+
+
+
+										<div class="pmr_thin_join" id="div_pmr_thin_join_cookie">
+											<span tabindex="0" class="btn btn-link big hidden thin-join direct btn_pmr_thinclient_join" rel="Join" role="button" id="mwx-btn-join-thin-client" name="joinnow">
+                                                                      Join by browser
+                                                              </span>
+										</div>
+
+
+
+
+
+
+									</div>
+
+
+									<script>
+										$(function(){
+    $('.s2_r>h1').css('max-height', '110px');
+     $('.s2_r>h1').dotdotdot();
+});
+
+
+
+									</script>
+
+
+									<input  data-modeB type="text" class="mt50" maxlength="64" size="35" type="text" id = "attendeeName" name="attendeeName" size="25" maxlength="64" onkeydown="AttNameClick()" onclick="AttNameClick()" onblur="AttNameOnblur()" onkeypress="KeyDown(event)" value='Your name'/>
+									<label for="attendeeName" class="hide">Your Name</label>
+
+									<input  data-modeB type="text" maxlength="64" size="35" type="email" id ="attendeeEmail" name="attendeeEmail" size="25" maxlength="64" onkeydown="AttEmailClick()" onclick="AttEmailClick()" onblur="AttEmailOnblur()" onkeypress="KeyDown(event)" value='Your email address'/>
+
+									<label for="attendeeEmail" class="hide">Your email address</label>
+
+									<!--Remember me checkbox-->
+
+									<div class="form-group hide" id="captchaDiv">
+										<div class="col-sm-9" style="padding-left:0px; white-space:nowrap;">
+											<div id="captchaContainer">
+												<img alt="captcha image" id="mwx-img-verificationImage" class="mwx-img-verificationImage" style="margin-top:14px;"  src="https://meetingsamer10.webex.com/mw3300/mywebex/verificationimage.do?siteurl=meetingsamer10&rnd=0.8551558415811213" />
+		</div>
+												<div id="captchaTextContainer" class="captchaTextContainer">
+													<input id="mwx-txt-captchaInput" aria-label="verification" class="mwx-txt-captchaInput" onkeypress="KeyDown(event)" style="margin-top:14px;" type="text" name="captcha" size="10" maxlength="6" value="">
+		</div>
+													<div id="moreImagediv" class="moreImagediv"
+														style="margin-top:14px;">
+														<a class="icon-group icon-group-refresh" id="mwx-lnk-moreImage"
+															role="button" aria-label="refresh captcha"
+															href="javascript: void(0)"></a>
+													</div>
+													<div id="sounddiv" class="sounddiv" style="margin-top:14px;">
+														<a class="icon-group icon-group-audio" id="mwx-lnk-sound"
+															role="button" aria-label="captcha content"
+															href="javascript: void(0)"></a>
+													</div>
+													<div class="captchaSoundArea">
+														<audio type="audio/x-wav" id="captcha_audio"
+															class="hide"></audio>
+														<object width="0" height="0" class="hide" type="application/x-oleobject" classid="clsid:6BF52A52-394A-11D3-B153-00C04F79FAA6">
+				<param value="-1" name="autoStart">
+			</object>
+													</div>
+													<div id="captchaArea" class="captchaArea">
+
+														<div id="captchaNoErrMsg" class="captchaNoErrMsg">
+														</div>
+
+													</div>
+												</div>
+
+											</div>
+											<div class='' id="mwx-div-nocookie_btn_line" style="margin-top: 13px;">
+												<a href="javascript:void(0)" role="button" id="mwx-btn-pmr-enter-lobby"
+													class='btn_join btn_join_gray btn_pmr_train_join'>Join Meeting</a>
+
+
+
+												<div class="pmr_thin_join" id="div_pmr_thin_join_nocookie">
+													<span tabindex="0" class="btn btn-link big hidden thin-join direct btn_pmr_thinclient_join" tabindex="0" data-input-driven-state="1" role="button" id="mwx-btn-join-thin-client" name="joinnow" disabled data-init-disabled="1">
+                            Join by browser
+                        </span>
+												</div>
+
+
+
+
+											</div>
+
+											<script language="javascript">
+												function init($, focusEleName){
+ 	   initCaptcha();
+    }
+    
+    function initCaptcha(){
+ 		var audioSrc = "https://meetingsamer10.webex.com/mw3300/mywebex/verificationsound.do?siteurl=meetingsamer10";
+ 		var imageSrc = "https://meetingsamer10.webex.com/mw3300/mywebex/verificationimage.do?siteurl=meetingsamer10";
+ 		var isIE = Train.Util.browser.msie;  // && (!Train.Util.browser.isIE11);
+ 		var previousPlayer = null;
+ 		$("#mwx-lnk-moreImage").click(function(){
+ 			regenerateImage(imageSrc);
+ 		});
+ 		$("#mwx-lnk-sound").click(function(){
+ 			//switchCaptchaOps("sound");
+ 			launchAudio(isIE,audioSrc,previousPlayer);
+ 		});
+ 		$("#mwx-lnk-moreSound").click(function(){
+ 			regenerateImage(imageSrc);
+ 			$("#mwx-img-verificationImage").one("load",function(){
+ 				launchAudio(isIE,audioSrc,previousPlayer);
+ 			});
+ 		});
+ 		$("#mwx-lnk-image").click(function(){
+ 			//switchCaptchaOps("image");
+ 			
+ 		});
+ 		$("#mwx-lnk-replay").click(function(){
+ 		    launchAudio(isIE,audioSrc,previousPlayer);
+ 		});
+ 		
+ 		//$("#captchaContainer").attr("style","width:120px;height:43px;border:1px solid rgba(151,151,151,0.2);margin-right:6px;text-align:center;float:left");
+ 		//$("#mwx-txt-captchaInput").attr("style","width:126px");
+    }
+ 	function regenerateImage(imageSrc) {
+ 		var image = document.getElementById("mwx-img-verificationImage");
+ 		image.src = imageSrc + "&rnd=" + Math.random();
+ 	}
+ 	function switchCaptchaOps(type){
+ 		if(type == "image"){
+ 			$("#imageOp").show();
+ 			$("#soundOp").addClass("hide");
+ 			$("#mwx-lnk-replay").addClass("hide");
+ 			$("#mwx-img-verificationImage").removeClass("hide");
+ 			$("#mwx-lnk-sound").focus();
+ 		}else{
+ 			$("#imageOp").hide();
+ 			$("#soundOp").removeClass("hide");
+ 			$("#mwx-lnk-replay").removeClass("hide");
+ 			$("#mwx-img-verificationImage").addClass("hide");
+ 			$("#mwx-lnk-replay").focus();
+ 		}
+ 	}
+ 	function launchAudio(isIE,audioSrc,previousPlayer){
+ 		if(isIE){
+ 			getIESound(audioSrc);
+ 		}else{
+ 			getSound(audioSrc,previousPlayer);
+ 		}
+ 	}
+ 	function getSound(soundSrc,previousPlayer) {
+ 		if (previousPlayer) {
+             this._previousPlayer.pause();
+         }
+ 		var audio = document.getElementById("captcha_audio");
+ 		audio.src = soundSrc + "&rnd=" + Math.random();
+ 		audio.play();
+ 		previousPlayer = audio;
+ 	}
+ 	function getIESound(soundSrc){
+ 		var player = $(".captchaSoundArea object")[0];
+         var src = soundSrc + "&rnd=" + Math.random();
+         player.URL = src;
+         player.controls.play();
+ 	}
+ 	
+ 	function showCaptchaArea() {
+ 		$("#captchaDiv").removeClass("hide");
+ 		init($,"captcha");
+        showFilledInputArea(); 
+ 	}
+
+	$(function() {
+		var attendeeName = "";
+		var attendeeEmail = "";
+		var requireAttendeeEmail = true;
+        if (attendeeName != "" && attendeeName != null
+                && !(requireAttendeeEmail != null && requireAttendeeEmail == true && attendeeEmail == '' )) {
+        	hideShowInput(true);  
+			var currentHour = new Date().getHours();			
+			
+				if(currentHour >= 0 && currentHour < 12) {
+					$('#mw_lab_join_as').text('Good morning, .');
+				} else if(currentHour >= 12 && currentHour < 18) {
+					$('#mw_lab_join_as').text('Good morning, .');
+				} else {
+					$('#mw_lab_join_as').text('Good morning, .');
+				}
+			
+			
+			$("#btn_more_info").css('margin-top', '15px');
+        } else {
+        	hideShowInput(false);
+        }
+        
+        
+	});
+
+
+
+											</script>
+
+
+
+
+
+
+
+											<h3 class='h2_icon' id='btn_more_info' tabindex="0" role="button"
+												aria-label="More ways to join"><i class='icon_info'></i>More ways to
+												join</h3>
+											<div id="blank_div" style="margin-top :30px;">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class='screen_i3' style="cursor:auto">
+
+
+
+
+									<div class='si_img_1' style="cursor:auto">
+										<img alt='wall photo'  style="cursor:auto" src='https://meetingsamer10.webex.com/mw3300/mywebex/html/img/mypmr/image_list1.png?ver=4149818356' />
+                      		</div>
+
+
+
+
+
+										<div class='si_img_2' style="cursor:auto">
+											<img alt='wall photo'  style="cursor:auto" src='https://meetingsamer10.webex.com/mw3300/mywebex/html/img/mypmr/image_list2.png?ver=3232546597' />
+                      		</div>
+
+
+
+
+
+											<div class='si_img_3' style="cursor:auto">
+												<img alt='wall photo'  style="cursor:auto" src='https://meetingsamer10.webex.com/mw3300/mywebex/html/img/mypmr/image_list3.png?ver=2541484392' />
+                      		</div>
+
+
+
+
+
+												<div class='si_img_4' style="cursor:auto">
+													<img alt='wall photo'  style="cursor:auto" src='https://meetingsamer10.webex.com/mw3300/mywebex/html/img/mypmr/image_list4.png?ver=3044471047' />
+                      		</div>
+
+
+
+												</div>
+												<a class='ar_left' id='ar_left' style="display:none;" tabindex="0"
+													href="javascript:void(0)" role="button"
+													aria-label="go to left page"><span style="display:none;">forAccessibility</span></a>
+												<a class='ar_right' id='ar_right' role="button"
+													href="javascript:void(0)" tabindex="0"
+													aria-label="go to right page"><span style="display:none;">forAccessibility</span></a>
+											</div>
+											<div class='con_mid_l3'></div>
+										</div>
+
+
+
+										<div class='logo_info' data-diff style="opacity:1;">
+
+											<a id="mwx-lnk-logoutLink"
+												href="https&#58;&#47;&#47;meetingsamer10.webex.com&#47;mw3300&#47;mywebex&#47;login&#47;login.do&#63;siteurl&#61;meetingsamer10&#38;login_return_url&#61;&#37;2Fmw3300&#37;2Fmywebex&#37;2Fcmr&#37;2Fcmr.do&#37;3Fsiteurl&#37;3Dmeetingsamer10&#37;26AT&#37;3Dmeet&#37;26username&#37;3Dflan828&#37;26clickElementID&#37;3DClickNothing">Log
+												In</a>
+										</div>
+
+										<div id="disclaimer" class='copyright pmr_footer_alumin'>By joining this
+											meeting, you are accepting the
+											<span><a href="https://www.webex.com/webex_terms.html" target=_blank>Terms of Service</a></span>
+											and
+											<span><a href="https://www.webex.com/webex_privacy.html" target=_blank>Privacy Statement</a></span>.
+										</div>
+										<script language="javascript">
+											var deskIndexSaved = 0;
+	    	 var disclaimerColor=[{
+		            color:'rgb(212,212,212)',
+		            classname:'copyright pmr_footer_wood'
+		        },{
+		            color:'rgb(212,212,212)',
+		            classname:'copyright pmr_footer_cherrywood'
+		        },{
+		            color:'rgb(255,255,255)',
+		            classname:'copyright pmr_footer_glass'
+		        },{
+		            color:'rgb(136,136,136)',
+		            classname:'copyright pmr_footer_alumin'
+		        }];
+			  	//$('#disclaimer').css('color',disclaimerColor[deskIndexSaved].color);
+			  	 $('#disclaimer').attr('class',disclaimerColor[deskIndexSaved].classname);
+										</script>
+										<img src='https://meetingsamer10.webex.com/mw3300/mywebex/html/img/mypmr/chair.png?ver=324342609' class='chair' alt='chair' />
+
+										<img src='https://meetingsamer10.webex.com/mw3300/mywebex/html/img/mypmr/Wood-Table.png?ver=110555639'  alt='table' class='con_bottom' id='con_bottom2' style="vertical-align: top;"/>
+
+
+
+
+
+
+
+										<img src='https://meetingsamer10.webex.com/mw3300/mywebex/html/img/mypmr/cups2.png?ver=3409871917' class='cup'  alt='cup' id='cu2p' />
+
+
+
+
+    </div>
+
+										<div style="display:none" id="warmup"></div>
+										<!-- for jmt warmup do not delete -->
+
+	</form>
+
+
+	<div style="position:absolute;left:-9900px;top:-9900px;">
+		<span id="hiddenMeetingURL">https&#58;&#47;&#47;meetingsamer10.webex.com&#47;meet&#47;flan828</span>
+	</div>
+	<div id="pmr_more" class="form-group form-section"
+		style="display:none;margin-top:50px;margin-bottom:200px;margin-left:330px;z-index:9999999">
+
+		<div class="pmr_pop">
+			<div class="pmr_pop_title">
+				<div class="pmr_pop_title_t" title="Stephen Flanagan&#39;s Personal Room">Stephen Flanagan&#39;s
+					Personal Room</div>
+				<div class="pmr_subtitle" style="white-space:nowrap;">
+					<label for="ipt-pmr-mmetingURL" style="display:none;">meetingURL</label>
+					<label for="ipt-pmr-meetingAccessCode" style="display:none;">meetingURL</label>
+					<input id="ipt-pmr-mmetingURL" onmouseover="this.select();" style="border:none;"  class="tipChageWidth pmr_invite_link" name="meetingURL" value="https&#58;&#47;&#47;meetingsamer10.webex.com&#47;meet&#47;flan828" title="https&#58;&#47;&#47;meetingsamer10.webex.com&#47;meet&#47;flan828" >
+					<span class="pmr_slit">|</span><input onmouseover="this.select();" class="pmr_invite_num" value="620 006 797" style="border:none;vertical-align:middle;width:90px;"  id="ipt-pmr-meetingAccessCode" name="meetingAccessCode">
+					</div>
+				</div>
+				<script language="javascript">
+					$("#ipt-pmr-mmetingURL").prop("readonly", true);
+					$("#ipt-pmr-meetingAccessCode").prop("readonly", true);
+				</script>
+				<!-- BMMP Widget for Upgrade Message in PMR - More Ways to Join - Start -->
+
+				<span class="cisco-bmmp-marketing-widget" data-styled="true" data-application-page="pmr" data-widget-location="room-details" data-redirect-url="https://meetingsamer10.webex.com/mw3300/mywebex/default.do?siteurl=meetingsamer10"></span>
+
+				<!-- BMMP Widget for Upgrade Message in PMR - More Ways to Join - End -->
+
+				<div class="pmr_pop_c">
+
+					<div class="pmr_pop_items">
+						<div class="pmr_pop_imoret">
+							<span>Join by video system</span>
+							<a class="ico ico-help" title="Help" target="_blank"
+								href="https&#58;&#47;&#47;help.webex.com&#47;article&#47;njmhfgbb"><span>i</span></a>
+						</div>
+						<div class="pmr_pop_imorei">
+
+
+							Dial flan828&#64;meetingsamer10.webex.com
+
+						</div>
+
+						<div class="pmr_pop_imorei">
+							You can also dial 173.243.2.68 and enter your meeting number.
+						</div>
+
+
+					</div>
+
+
+
+
+
+					<div class="pmr_pop_items">
+
+
+
+						<div class="pmr_pop_imoret">
+							<span> Join by phone</span> </div>
+
+
+						<div class="pmr_pop_imorei">
+							<span>&#43;1-408-418-9388</span>
+							<i>United States Toll</i>
+						</div>
+
+
+
+
+						<div class="">
+							Access code:&nbsp;
+							<span>620 006 797</span>
+
+						</div>
+
+
+
+
+
+						<!--  -->
+
+
+
+
+					</div>
+
+
+
+					<div class="pmr_pop_items pmr_pop_items_gc">
+						<div class="pmr_pop_imoret">
+
+							<a id="mwx-lnk-cmr-global-call" href='javascript:void(0)'
+								onclick='showGlobalCallin();'>Global call-in numbers</a>
+
+
+
+
+
+
+
+						</div>
+					</div>
+
+
+
+				</div>
+
+
+			</div>
+			<!-- new end -->
+
+			<script language="javascript">
+				function showGlobalCallin() {
+						window.open('https\x3a\x2f\x2fmeetingsamer10.webex.com\x2fcmp3300\x2fwebcomponents\x2fwidget\x2fglobalcallin\x2fglobalcallin.do\x3fsiteurl\x3dmeetingsamer10\x26serviceType\x3dMC\x26ED\x3d971358162\x26tollFree\x3d0', 'SystemDiagnosis','toolbar=no,status=no,scrollbars=no,resizable=1,width=620,height=610,left=180,top=120,screenX=160,screenY=100');
+					}
+			</script>
+
+		</div>
+	</div>
+	<script language="javascript">
+		$(function(){
+		var inputWidth = $("#hiddenMeetingURL").width();
+		if(inputWidth < 275){
+			$("#tip-meetingURL").css("width", inputWidth + "px");
+		}else{
+			$("#tip-meetingURL").css("width", "275px");
+		}
+
+	});
+	</script>
+
+</body>
+<script language="javascript" type="text/javascript">
+	function openPhotoLink(photoIndex) {
+		
+		if ($('.screen_i3').css('opacity') == '1') {
+			var photoLinkURL = "https://www.webex.com/pricing/index.html";
+			if (photoIndex == 1) {
+				photoLinkURL = "http://www.ciscospark.com/products/spark-messaging.html#download";
+			} else if (photoIndex == 2) {
+				photoLinkURL = "https://meetings.webex.com/collabs/auth";
+			} else if (photoIndex == 3) {
+				photoLinkURL = "https://www.webex.com/products/web-conferencing/mobile.html";
+			} 
+			window.open(photoLinkURL);
+		}
+		
+	}
+	$(function(){
+		var $font =  $("span#autoSelected");
+        var meetLinkWidth = 400;
+        var contentHtml = [
+				document.getElementById("pmr_more").innerHTML
+        ];
+		$("#pmr_more").html("");
+        var $moreInfo = $("#btn_more_info");
+        var templateString = '<div class="popover t-poptip fade pmr_popw" role="alert" style="z-index: 5000;"><div class="arrow">&#8896;</div><div class="popover-content">'+contentHtml.join('')+'</div></div>';
+        var topMore  = 0.8;
+        
+        
+        $moreInfo.poptip({
+            placement:"right",
+            html: true,
+            accessible:true,
+            trigger:"click",
+            showClose: true,
+            template: templateString,
+            autoClose:true,
+			dynamicArrow : true,
+		    //	alwaysOnTopOf : "#blank_div",
+		    percentOfTipShownOnTheTopOfTrigger:topMore,
+			id : "tip-helpIcon",
+			container:"body",
+            content:contentHtml.join('')
+        }).on('shown.bs.popover', function () {
+            sendTelemetry2("pmr", "moreinfo", "guestview");
+				$moreInfo.addClass("h2_icon_poptipShown");
+				var $iconFirst = $($moreInfo.find("i")[0]);
+				$iconFirst.removeClass("icon_info").addClass("icon_info2");
+				var inputWidth = $("#hiddenMeetingURL").width();
+					var $meetingURLNode = $("#tip-helpIcon").find(".tipChageWidth");
+					if(inputWidth < 255){
+						$meetingURLNode.css("width", inputWidth + "px");
+					}else{
+						$meetingURLNode.css("width", "255px");
+					}
+        }).on('hidden.bs.popover', function(){
+            //isShow = true;
+			$moreInfo.addClass("h2_icon_poptipShown");
+			var $iconFirst = $($moreInfo.find("i")[0]);
+			$iconFirst.removeClass("icon_info2").addClass("icon_info");
+        }).on('click', '', function(evt){
+        	<!-- BMMP Widget for More Ways to Join in Non-Frame PMR header - Start -->
+			
+			<!-- BMMP Widget for More Ways to Join in Non-Frame PMR header - End -->
+        });
+        
+        $('[data-toggle="tooltip"]').tooltip();
+        
+        var closeThinClientPopOver = function(){
+			if($("#mwx-div-nocookie_btn_line").is(":visible")){
+	            $("#mwx-div-nocookie_btn_line").find("#beta-label-thin-client").popover("hide");
+			}else if($("#mwx-div-cookie_btn_line").is(":visible")){
+				$("#mwx-div-cookie_btn_line").find("#beta-label-thin-client").popover("hide");
+			}
+		
+		};
+		
+		
+    	 $(document).on("transformIMAXBegin",function(e, item){    	
+			closeThinClientPopOver();
+			$.fn.poptip.closeAllTip();
+		});  
+		
+		$(document).on("transformIMAXEnd",function(e,item){
+			if(item.next.index==1){
+				$('#ar_left').focus();
+				$("#con_mid_l2").addClass('pmr_right_body');
+				$("#con_mid_l2").removeClass('pmr_middle_body');
+			} else {
+				$("#con_mid_l2").removeClass('pmr_right_body');
+				$("#con_mid_l2").addClass('pmr_middle_body');
+			}
+			
+		});
+		$(window).on("resize",function(){
+			closeThinClientPopOver();
+		});
+		
+	});
+
+$(function(){
+    var checkbox = $('#remember-me')
+    if (checkbox.length > 0) {
+        checkbox.checkbox({
+            text:"Remember me",
+            name:"savePwd",
+            checked: true,
+            disabled: false,
+            id:"mwx-chk-rememberme",
+            click: function() {
+                //
+            }
+        });
+    }
+    var txtUserName = $("#attendeeName");
+    var txtEmail = $("#attendeeEmail");
+    var txtCaptcha = $("#mwx-txt-captchaInput");
+    function checkStartBtnDisable() {
+  
+   
+   var startBtn = $("#mwx-btn-pmr-enter-lobby"),
+  
+            btnPB  =  $('[data-input-driven-state="1"].direct');       
+            
+        var txtUserNameVal = txtUserName.val();
+        var txtEmailVal = txtEmail.val();
+        var txtRequiredAttendeeEmail = 1;
+        var markedAttName = "Your name";
+        var markedEmail = "Your email address";
+ 
+        var sameAttName = false;
+        var sameAttEmail = false;
+        if (txtUserNameVal == markedAttName) {
+            sameAttName = true;
+            txtUserName.removeClass("attInputColor").addClass("markAttInputColor");
+        } else {
+            sameAttName = false;
+            txtUserName.removeClass("markAttInputColor").addClass("attInputColor");
+        }
+        if (txtEmailVal == markedEmail) {
+            sameAttEmail = true;
+            txtEmail.removeClass("attInputColor").addClass("markAttInputColor");
+        } else {
+            sameAttEmail = false;
+            txtEmail.removeClass("markAttInputColor").addClass("attInputColor");
+        }
+        
+        var nameIsEmpty = false;
+        var emailIsEmpty = false;
+        if (txtUserName.length > 0) {
+            nameIsEmpty = (txtUserNameVal != "" && !sameAttName) ? false : true;
+        }
+        if (txtEmail.length > 0) {
+            emailIsEmpty = (txtEmailVal != "" && !sameAttEmail) ? false : true;
+        }
+        if (!checkCaptcha(txtCaptcha) || nameIsEmpty || (emailIsEmpty && txtRequiredAttendeeEmail) || (!isValidEmail(txtEmailVal) && !emailIsEmpty)) {
+        	startBtn.unbind("click");
+        	startBtn.click(
+        		function() {
+        			return;
+        		}
+        	);
+            btnPB.addClass('disabled');
+            btnPB.attr('disabled', 'disabled');
+            $('#div_pmr_thin_join_nocookie').addClass('disabled');
+            startBtn.addClass("btn_join_gray");
+        } else {
+             btnPB.removeClass('disabled');
+             btnPB.removeAttr('disabled');
+             $('#div_pmr_thin_join_nocookie').removeClass('disabled');
+             startBtn.removeClass("btn_join_gray");
+             startBtn.unbind("click");
+             startBtn.click(
+            	function() {
+            		 JoinNow();
+            	}
+             );             
+        }
+    }
+    
+    function checkCaptcha(captchaInput) {
+    	if(captchaInput != null && captchaInput.length>0 && captchaInput.is(":visible")) {
+            var txtCaptcha = captchaInput.val();
+            if (txtCaptcha.length > 0) {
+            	return true;
+            } else {
+            	return false;
+            }
+    	} else {
+    		return true;
+    	}
+
+    }
+    
+    if (txtUserName.length > 0) {
+        txtUserName.on("paste change keyup blur",function(){
+            checkStartBtnDisable();
+        });
+    }
+    if (txtEmail.length > 0) {
+        txtEmail.on("paste change keyup blur",function(){
+            checkStartBtnDisable();
+        });
+    }
+    
+    if (txtCaptcha != null && txtCaptcha.length > 0) {
+    	txtCaptcha.on("paste change keyup blur",function(){
+    		checkStartBtnDisable();
+        });
+    }
+    
+      
+    checkStartBtnDisable();
+    $("#attendeeName").blur();
+    $("#attendeeName").focus();
+    
+    
+    var errorMsg = $("#errorText");
+    if(errorMsg != null && errorMsg.is(":visible")){
+	       var captchaInput = $("#mwx-txt-captchaInput");
+	       captchaInput.val('');
+	       captchaInput.focus();
+    }
+    
+    
+});
+
+
+</script>
+<script type="text/javascript">
+	// this flag for lobby room return back after login.
+    top.need_login_callback_url="true";
+    
+</script>
+
+
+
+
+
+<script>
+	var is_mouse_out_popover = false;
+    	var has_click_beta = false;
+    	var pmrhostincookie=false;
+    	function checkPbloader2(){
+	    	if ($('.beta-label').length > 0) {
+	    		bindEvent2BetaLabel();
+	    		if ($('.join-via-browser-pop').length > 0 && $('.join-via-browser-pop').css('display') == 'block') {
+	        		$('#ar_right').hide();
+	        	}
+	    		$('#popover-notice-close').click( function() {
+                    $('#ar_right').show();
+                    window.setTimeout(function () { 
+                    	bindEvent2BetaLabel();
+                    }, 100);                    
+                });	    		
+/* 	    		window.setTimeout(function () { 
+	    			$('.beta-label').each(function() {
+	    				$(this).unbind('mouseenter');
+	    				$(this).unbind('click');
+	    			});	    			
+                }, 1000);  */
+	    		window.clearInterval(monitor_handler2); 
+	    	}	    	            
+	    }
+	    
+	    function bindEvent2BetaLabel() {
+	    	
+	    	$('.beta-label').each(function() {
+    			$(this).mouseover( function() {
+    				if (is_mouse_out_popover && $('#popover-notice-close').length == 0) {
+    					 $('#ar_right').show();
+    				} else {
+    					 $('#ar_right').hide();
+    				}
+               
+                	is_mouse_out_popover = false;
+            	});
+    		});
+    		
+    		$('.beta-label').each(function() {$(this).mouseout( function() {
+    			if ($('.join-via-browser-pop').length > 0 ) {
+    				if ($('#popover-notice-close').length > 0) {
+    					$('#ar_right').hide();
+    				} else {
+    					$('#ar_right').show();
+    				}
+	        	} else {
+    				$('#ar_right').show();
+	        	}
+    			
+    			$('.join-via-browser-pop').each(function() {
+        			$(this).mouseover( function() {
+        				$('#ar_right').hide();
+                	});
+        			$(this).mouseout( function() {
+        				is_mouse_out_popover = true;
+        				if ($('#popover-notice-close').length == 0) {
+        					$('#ar_right').show();
+        				} else {
+        					$('#ar_right').hide();
+        				}
+                	});
+        			$(this).mouseleave( function() {
+        				is_mouse_out_popover = true;
+        				if ($('#popover-notice-close').length == 0) {
+        					$('#ar_right').show();
+        				} else {
+        					$('#ar_right').hide();
+        				}
+                	});
+        		});
+            });
+    		});
+    		
+    		
+	    }
+        
+        (function(window, $) {
+            "use strict";
+            /*global document:false, getJoinURL:false, thinClientConfig: false, checkGuestInput: false, alert: false, PreJoinFrom: false*/
+            var initiallyShow = true;
+            var endUrl = '//meetingsamer10.webex.com/mc3300/meetingcenter/meetingend/meetingend.do?siteurl=meetingsamer10&from=meeting&backurl=';
+            window.thinClientConfig = window.thinClientConfig || {};
+            $.extend(window.thinClientConfig, {
+
+                initiallyShow: initiallyShow,
+    
+                pbSettings : {
+                    __COMMENT: "v2", 
+                    html5cientflag:"true",
+                    displayLang: "en_US",
+                    
+                    
+                    
+                    reportingCheckURL: "https://meetingsamer10.webex.com/mc3300/meetingcenter/joinmeeting/html5client.do?siteurl=meetingsamer10&html5cientflag="+$('#SelectClient').prop("checked"),
+                    siteURL: "https://meetingsamer10.webex.com/meetingsamer10",
+                    MeetingKey: "620006797".replace(/ /g, ''),
+                    disclaimerUrl: "",
+                    backURL: endUrl,
+                
+                
+                    userDisplayName: "",
+                    userEmail: "",
+                
+                    optEndPopupUrl: "",
+                    sessionTicket: "",
+                    hostAvatarURL:"https://meetingsamer10.webex.com/mw3300/downloadFileServlet?siteurl=meetingsamer10&fileURI=QUhTSwAAAAR0hi-neuHweXuyyw57IXKnM6oh3SlraMgRkQKeD_MmkJsFDwGu4bTxiRIgM346QH71GBEkToIUkrxhmXPagc9ImqriRrPW0L6KbWPr8_Vj42UYjEgvbqtJ0UZiIpEkcflT7xlFZ8MEwhEpd9_DSD3x0&isAbsolute=true&a_size=640",
+                    pageVersion: '40.2.13.6',
+                    isPersonalRoom: true,
+                    hostDisplayName: "Stephen Flanagan",
+                    meetingTopic: "Stephen Flanagan\x27s Personal Room"
+                },
+                joinNowNeedLogin: ThinClientJoinNow,
+                joinFormInputCheck: function(){
+                	return checkGuestInput();
+                },
+                onEscalateThin: function(){
+                    location.assign(endUrl);
+                },
+                onFinishThin: function(){
+                    location.assign(endUrl);
+                },
+                onLaunchThin: function(){
+                    //set the rememberme cookie by submiting the same form the normal client sends
+                    var isLauchThin = true;
+                    var pass = false;
+					var loginURL ='';
+                    var joinURL = getJoinURL(isLauchThin);
+                    if (joinURL === false) {
+                       return false;
+                    }
+                    var captchaInput = $("#mwx-txt-captchaInput");
+                    var txtCaptcha='';
+                    if(captchaInput != null && captchaInput.length>0) {
+                        txtCaptcha = captchaInput.val();
+                    }
+                    
+                    $.ajax({
+                        url: joinURL + '&captcha=' + txtCaptcha + '&ajaxCall=thinClient',                        
+                        type: 'post',
+                        async: false,
+                        success: function(data){
+                         pass = false;
+                         loginURL = '';
+                          if (data && data.status === 'success') {
+                                pass = true;
+                                window.thinClientConfig.pbSettings.prerequisiteShowCaptcha = data.prerequisiteShowCaptcha;
+                                if (data.thinclientLoginURL!='' && data.thinclientLoginURL!=null) {
+                                	loginURL = data.thinclientLoginURL;
+                                }
+                            }
+                       }
+                    });
+                    if(pass) {
+                    	if (loginURL !='') {
+                    		top.location.href = loginURL;
+                    		return false;
+                    	} else {
+                    		return true;
+                    	}
+                        
+                    } else {
+						if (window.location.href.indexOf("attendeeName") <= 0 ) {   // CSCva85663
+							var subString = "";
+							if (window.location.href.charAt(window.location.href.length - 1) !=="&") {
+								subString = subString +'&';
+							}
+							subString = subString + "&attendeeName="+"" + "&attendeeEmail="+ "" ;
+							window.location.href = window.location.href + subString;
+						} else {
+							window.location.reload();
+						}
+                        return false;
+                    }
+                },
+                fteContent: {
+                    title: 'Try the new Webex web app!',
+                    
+                    contentBestExperience: [
+                            "<div class='popover-line'></div>",
+                            "<div><ul><li><i class='ico ico-tip'>&#10003;</i> For the best experience (including video and screen sharing support), join using Firefox or Chrome.</li></ul></div>"
+                            ].join(''),
+                    
+                    content: [
+                               "<div>",
+                               "<ul>",
+                                 "<li>",
+                                    '<span class="ico ico-list-check"></span>',
+                                   "Nothing to install",
+                                 "</li>",
+                                 "<li>",
+                                    '<span class="ico ico-list-check"></span>',
+                                    "Simple, intuitive, and even faster",
+                                 "</li>",
+                                 "<li>",
+                                    '<span class="ico ico-list-check"></span>',
+                                   "Ideal for participants who need basic meeting features",
+                                 "</li>",
+                               "</ul>",
+							 "</div>",
+							 "<div class='popover-learnmore'><a href='https://collaborationhelp.cisco.com/article/n1pxgbz' target='_blank'><span>Learn more</span></a></div>"
+                            ].join('')
+                },
+                joinFormQueries: {
+                    userDisplayName: 'input[name=attendeeName]',
+                    meetingPassword:'input[name=password]',
+                    userEmail:'input[name=attendeeEmail]',
+                    thinClientLauncher: '.direct',
+                    thinClientButtonsUI: '.direct',
+                    thinClientLauncherNeedLogin: '.need-login',
+                    thinClientButtonsUINeedLogin: '.thin-join.need-login',
+                    thinClientDisabledJoinTooltipLeader: '.thin-join-wrap[data-should-not-join=true]',
+                    disableForHostersAttribute: 'data-should-not-join',
+                    chromeAppLauncher: '.btn_join'
+                },
+                messages: {
+                    tooltipThinAltHost: 'TODO alt host text here explaining why the button is disabled',
+                    closeFTE: "Close"
+                },
+                scripts: [
+                    "https://nebulab.webex.com/pb/web/40.1.5.64/pbconfig.js?rnd=0.38887974211173404",
+                    "https://nebulab.webex.com/pb/web/40.1.5.64/pbloader.js?lang=en_US&rnd=0.670005706176427"
+               ]
+           });
+           $('#split-style-thin-client').css('margin-top', '13px');
+        }(this, this.$));
+        
+         // var monitor_handler2 = window.setInterval(function () { 
+          //  checkPbloader2();
+       // }, 100);
+        
+			var thinbaseURL = "https://nebulab.webex.com/pb/web/40.1.5.64";
+        
+</script>
+
+
+
+
+
+
+<script src="https://nebulab.webex.com/pb/web/40.1.5.64/thinClientSupportAPI.js?rnd=0.35901229855411865"></script>
+
+<script src="https://meetingsamer10.webex.com/cmp3300/webcomponents/html/js/thinClientInit.js?ver=1643607973"></script>
+
+
+
+<script>
+	$(function(){
+        $('#split-style-thin-client').css('margin-top', '13px');
+             $('.s2_r>h1').dotdotdot();//for bug CSCuy30763
+            $(window).resize(function(){
+                $('.s2_r>h1').dotdotdot();
+            });
+        });
+</script>
+<script type="text/javascript" src="/WBXmjsasset/js/common/prewarmuppmr.js?rnd=0.5740673994953863"></script>
+
+<script type="text/javascript">
+	setTimeout(function(){
+			  if(typeof(PreWarmUpAPI)!='undefined'){
+			 		PreWarmUpAPI.loadLib('2.21.4.64',$,"true")
+			 	}
+		},1000);
+</script>
+
+
+<script type="text/javascript"
+	src="https://meetingsamer10.webex.com/svc3300/svccomponents/html/js/extension-meetingapi/cwcsf.nativemsg.js?ver=1442479019">
+</script>
+<script type="text/javascript"
+	src="https://meetingsamer10.webex.com/svc3300/svccomponents/html/js/warmmeetingapi.js?ver=429207731"></script>
+<script type="text/javascript"
+	src="https://meetingsamer10.webex.com/svc3300/svccomponents/html/js/protocolcheck.js?ver=2278632964"></script>
+<script type="text/javascript"
+	src="https://meetingsamer10.webex.com/svc3300/svccomponents/html/js/warmup.js?ver=4268334869"></script>
+<script type="text/javascript">
+	$(setTimeout(function(){
+			    if (typeof(TrainWarmUpAPI)!="undefined") {
+			        
+			        
+			        TrainWarmUpAPI.init('',$,'https://meetingsamer10.webex.com/svc3300/svccomponents/html/js/extension-meetingapi/cwcsf-nativemsg-iframe-43c85c0d-d633-af5e-c056-32dc7efc570b.html?ver=','15')
+			    }
+			}, 100))
+</script>
+
+
+</body>
+
+
+
+</html>

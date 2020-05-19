@@ -57,7 +57,7 @@ def get_data():
     xmlData = open(xmlFile, 'w')
     # so many questions so little time! URL please?
     url = input("Please enter the URL: ")
-    print("Testing URL '{}'".format(url))
+    print("Testing UR L '{}'".format(url))
     try:
          r = requests.get(url)
     except requests.exceptions.ConnectionError as e:

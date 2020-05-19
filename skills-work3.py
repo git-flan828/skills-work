@@ -10,8 +10,9 @@ import requests
 from getpass import getpass
 from requests.auth import HTTPBasicAuth
 import traceback as tb
-# this is the file that has the mistakes in it. 
-# 2+2=8 is a mistake. 
+# Here is a file that we are going to commit to the remote repo. 
+# this is the before file. 
+# We are going to revert to this file after making changes
 
 
 

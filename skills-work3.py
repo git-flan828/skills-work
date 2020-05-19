@@ -10,7 +10,7 @@ import requests
 from getpass import getpass
 from requests.auth import HTTPBasicAuth
 import traceback as tb
-
+# here is a new comment. 
 
 
 
@@ -21,6 +21,7 @@ def get_res_data(csvFile = 'resources.csv'):
 #    xmlData.write('<?xml version="1.0"?>' + "\n")
 #     there must be only one top-level tag
 #    xmlData.write('<csv_data>' + "\n")
+#   this is a new comment 
     csvData = csv.reader(open(csvFile))
     rowNum = 0
     for row in csvData:

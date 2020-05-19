@@ -10,8 +10,10 @@ import requests
 from getpass import getpass
 from requests.auth import HTTPBasicAuth
 import traceback as tb
-# here is a new comment. 
-# here is a newer coment with a mistake
+# Here is a file that we are going to commit to the remote repo. 
+# this is the before file. 
+# We are going to revert to this file after making changes
+
 
 
 
